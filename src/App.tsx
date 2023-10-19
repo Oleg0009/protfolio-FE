@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import HeroSection from './components/sections/HeroSection';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Portfolio Statkevych
-    </div>
+    <main>
+      <HeroSection />
+    </main>
   );
 }
 
