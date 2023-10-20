@@ -25,19 +25,147 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style media="" data-href="style/style.css">
+    @keyframes fadeIn {
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes flipInX {
+      from {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+      }
+      40% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-transform: perspective(400px) rotateY(-20deg);
+        transform: perspective(400px) rotateY(-20deg);
+      }
+      60% {
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg);
+      }
+      80% {
+        -webkit-transform: perspective(400px) rotateY(-5deg);
+        transform: perspective(400px) rotateY(5deg);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+      }
+    }
+    @keyframes popDown {
+      0% {
+        transform: translateY(-100px);
+      }
+    }
+    @keyframes slideUp {
+      0% {
+        transform: translateY(300px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-300px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-300px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes slideInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(300px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes toBottomFromTop {
+      49% {
+        transform: translateY(100%);
+      }
+      50% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      51% {
+        opacity: 1;
+      }
+    }
+    @keyframes popIn {
+      0% {
+        transform: scale(0);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      80% {
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .canvas {
+        background: #000000;
+      }
+    .canvas {
+      background: url("./filler.png") center center/cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    body {
+      color: #fff;
+      font-family: "Raleway";
+      font-size: 8pt;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0px;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    
+    </style>
+  <script src="./pt.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+ 
+    <script src="./canvas-animation.js"></script>
   </body>
 </html>

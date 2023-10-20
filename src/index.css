@@ -2,50 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-canvas {
+#pt {
   width: 100%;
   height: 100vh;
 }
 
 .animated-text {
-  font-size: 0px;
   /* width: 130px; */
-  transform: rotate(360deg);
-  transition: transform 1s ease, font-size 3s ease;
+  transform: rotate(360deg) scale(0);
+  transition: transform 1s ease;
   animation: stopAnimation 1s forwards;
 }
 
 .animated-text-2 {
-  font-size: 0px;
   /* width: 350px; */
-  transform: rotate(360deg);
-  transition: transform 1s ease, font-size 3s ease;
+  transform: rotate(360deg) scale(0);
+  transition: transform 1s ease;
   animation: stopAnimation 1s forwards;
   animation-delay: 1s;
 }
 
 .animated-text-3 {
-  font-size: 0px;
   /* width: 350px; */
-  transform: rotate(360deg);
-  transition: transform 1s ease, font-size 3s ease;
+  transform: rotate(360deg) scale(0);
+  transition: transform 1s ease;
   animation: stopAnimation 1s forwards;
   animation-delay: 2s;
 }
 
 
 @media screen and (min-width:320px) {
-  @keyframes stopAnimation {
-    to {
-      font-size: 20px;
-    }
+
+  .animated-text-3,
+  .animated-text-2,
+  .animated-text {
+    font-size: 20px;
+  }
+
+
+}
+
+@keyframes stopAnimation {
+  to {
+    transform: scale(1);
   }
 }
 
 @media screen and (min-width:780px) {
-  @keyframes stopAnimation {
-    to {
-      font-size: 35px;
-    }
+
+  .animated-text-3,
+  .animated-text-2,
+  .animated-text {
+    font-size: 35px;
   }
 }

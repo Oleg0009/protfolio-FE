@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   return (
     <main>
+
       <HeroSection />
     </main>
   );
