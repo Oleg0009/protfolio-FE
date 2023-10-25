@@ -17,8 +17,8 @@ function App() {
       <NavBar />
       <HeroSection />
       <AboutSection />
-      <ExperienceSection />
       <SkillsSection />
+      <ExperienceSection />
       <ContactUsSection />
     </main>
   );
